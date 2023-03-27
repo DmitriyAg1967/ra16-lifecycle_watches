@@ -2,7 +2,6 @@ import AddForm from "../AddForm/AddForm";
 import { useState } from "react";
 import WatchList from "../WatchList/WatchList";
 
-
 export default function Controller() {
   const [list, setList] = useState([]);
 
@@ -11,8 +10,10 @@ export default function Controller() {
   }
 
   const onDelete = (id) => {
-    setList(list.filter((el) => el.id !== id))
+    setList(list=>list.filter((el) => el.id !== id))
   }
+
+  
   
   return (
     <div className="app">
